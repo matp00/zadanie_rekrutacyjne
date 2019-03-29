@@ -12,7 +12,7 @@ public class MainApp {
         double rabat = 100;
 
         List<Produkt> productsData = new ArrayList<>();
-        productsData.add(new Produkt("blender", 500d));
+        productsData.add(new Produkt("blender", 0d));
         productsData.add(new Produkt("telewizor", 1500d));
         productsData.add(new Produkt("lodowka", 500d));
         productsData.add(new Produkt("telefon", 500d));
@@ -22,7 +22,10 @@ public class MainApp {
         //lista moze miec maxymalnie 5 produktow
         //kazdy element musi miec nazwe oraz cene wieksza niz 0
         if(Produkt.isValidate(productsData)){
-            throw new Exception("Dane wejsciowe sa nieprawidlowe");
+            throw new Exception("\nDane wejsciowe sa nieprawidlowe:\n" +
+                    "Lista produktow moze miec maxymalnie 5 elementow\n" +
+                    "Nazwy produktow nie moga byc puste\n" +
+                    "Ceny produktow muszą przekraczac 0");
         }
 
         List<Produkt> products = Produkt.obliczWartoscRabatu(productsData,rabat);

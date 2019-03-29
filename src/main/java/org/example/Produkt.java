@@ -31,17 +31,10 @@ public class Produkt {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public Double getCena() {
         return cena;
     }
 
-    public void setCena(Double cena) {
-        this.cena = cena;
-    }
 
     public Double getPrzelicznikRabatu() {
         return przelicznikRabatu;
